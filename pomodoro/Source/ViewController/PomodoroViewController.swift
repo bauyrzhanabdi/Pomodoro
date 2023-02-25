@@ -6,8 +6,8 @@ final class PomodoroViewController: UIViewController {
     private lazy var isWorkTime: Bool = true
     private lazy var isStarted: Bool = false
     private lazy var isActive: Bool = false
-    private lazy var workingColor: UIColor = .red
-    private lazy var relaxingColor: UIColor = .orange
+    private lazy var workingColor: UIColor = .systemRed
+    private lazy var relaxingColor: UIColor = .systemBlue
     private lazy var timer: Timer? = nil
     private lazy var milliseconds: TimeInterval = 0
     private lazy var timeRemaining: TimeInterval = 25
