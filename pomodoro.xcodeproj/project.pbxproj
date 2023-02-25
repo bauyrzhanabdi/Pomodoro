@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		B2D3766429A9DED60001C907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3766329A9DED60001C907 /* AppDelegate.swift */; };
 		B2D3766629A9DED60001C907 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3766529A9DED60001C907 /* SceneDelegate.swift */; };
-		B2D3766829A9DED60001C907 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3766729A9DED60001C907 /* ViewController.swift */; };
-		B2D3766B29A9DED70001C907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D3766929A9DED70001C907 /* Main.storyboard */; };
+		B2D3766829A9DED60001C907 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3766729A9DED60001C907 /* PomodoroViewController.swift */; };
 		B2D3766D29A9DEDE0001C907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D3766C29A9DEDE0001C907 /* Assets.xcassets */; };
 		B2D3767029A9DEDE0001C907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D3766E29A9DEDE0001C907 /* LaunchScreen.storyboard */; };
+		B2D3767D29A9E4970001C907 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B2D3767C29A9E4970001C907 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2D3766029A9DED60001C907 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D3766329A9DED60001C907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D3766529A9DED60001C907 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2D3766729A9DED60001C907 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2D3766A29A9DED70001C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2D3766729A9DED60001C907 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 		B2D3766C29A9DEDE0001C907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2D3766F29A9DEDE0001C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2D3767129A9DEDE0001C907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D3767D29A9E4970001C907 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +56,54 @@
 		B2D3766229A9DED60001C907 /* pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				B2D3767A29A9E1140001C907 /* Source */,
+				B2D3767929A9E0F00001C907 /* Resource */,
+			);
+			path = pomodoro;
+			sourceTree = "<group>";
+		};
+		B2D3767729A9E0C70001C907 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				B2D3766329A9DED60001C907 /* AppDelegate.swift */,
 				B2D3766529A9DED60001C907 /* SceneDelegate.swift */,
-				B2D3766729A9DED60001C907 /* ViewController.swift */,
-				B2D3766929A9DED70001C907 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B2D3767829A9E0D00001C907 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3766729A9DED60001C907 /* PomodoroViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2D3767929A9E0F00001C907 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				B2D3766C29A9DEDE0001C907 /* Assets.xcassets */,
 				B2D3766E29A9DEDE0001C907 /* LaunchScreen.storyboard */,
 				B2D3767129A9DEDE0001C907 /* Info.plist */,
 			);
-			path = pomodoro;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B2D3767A29A9E1140001C907 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3767729A9E0C70001C907 /* App */,
+				B2D3767829A9E0D00001C907 /* ViewController */,
+				B2D3767E29A9E8A70001C907 /* Extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B2D3767E29A9E8A70001C907 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,9 @@
 			dependencies = (
 			);
 			name = pomodoro;
+			packageProductDependencies = (
+				B2D3767C29A9E4970001C907 /* SnapKit */,
+			);
 			productName = pomodoro;
 			productReference = B2D3766029A9DED60001C907 /* pomodoro.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,9 @@
 				Base,
 			);
 			mainGroup = B2D3765729A9DED60001C907;
+			packageReferences = (
+				B2D3767B29A9E4970001C907 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B2D3766129A9DED60001C907 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +172,6 @@
 			files = (
 				B2D3767029A9DEDE0001C907 /* LaunchScreen.storyboard in Resources */,
 				B2D3766D29A9DEDE0001C907 /* Assets.xcassets in Resources */,
-				B2D3766B29A9DED70001C907 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D3766829A9DED60001C907 /* ViewController.swift in Sources */,
+				B2D3766829A9DED60001C907 /* PomodoroViewController.swift in Sources */,
 				B2D3766429A9DED60001C907 /* AppDelegate.swift in Sources */,
 				B2D3766629A9DED60001C907 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2D3766929A9DED70001C907 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2D3766A29A9DED70001C907 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2D3766E29A9DEDE0001C907 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +325,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = APV84TNMCN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = pomodoro/Info.plist;
+				INFOPLIST_FILE = pomodoro/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +352,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = APV84TNMCN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = pomodoro/Info.plist;
+				INFOPLIST_FILE = pomodoro/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2D3767B29A9E4970001C907 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2D3767C29A9E4970001C907 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2D3767B29A9E4970001C907 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2D3765829A9DED60001C907 /* Project object */;
 }
