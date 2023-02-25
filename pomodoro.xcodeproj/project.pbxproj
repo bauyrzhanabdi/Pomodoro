@@ -15,6 +15,7 @@
 		B2D3767D29A9E4970001C907 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B2D3767C29A9E4970001C907 /* SnapKit */; };
 		B2D3768029A9EAB00001C907 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3767F29A9EAB00001C907 /* UILabel+Ext.swift */; };
 		B2D3768229A9EF240001C907 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3768129A9EF240001C907 /* UIButton+Ext.swift */; };
+		B2D3768829AA322E0001C907 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3768729AA322E0001C907 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B2D3767129A9DEDE0001C907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2D3767F29A9EAB00001C907 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		B2D3768129A9EF240001C907 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		B2D3768729AA322E0001C907 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				B2D3767729A9E0C70001C907 /* App */,
 				B2D3767829A9E0D00001C907 /* ViewController */,
+				B2D3768929AA32340001C907 /* View */,
 				B2D3767E29A9E8A70001C907 /* Extensions */,
 			);
 			path = Source;
@@ -110,6 +113,14 @@
 				B2D3768129A9EF240001C907 /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2D3768929AA32340001C907 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3768729AA322E0001C907 /* CircularProgressBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				B2D3766829A9DED60001C907 /* PomodoroViewController.swift in Sources */,
 				B2D3766429A9DED60001C907 /* AppDelegate.swift in Sources */,
 				B2D3768029A9EAB00001C907 /* UILabel+Ext.swift in Sources */,
+				B2D3768829AA322E0001C907 /* CircularProgressBarView.swift in Sources */,
 				B2D3766629A9DED60001C907 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
