@@ -17,7 +17,7 @@ final class PomodoroViewController: UIViewController {
     // MARK: - Outlets
     private lazy var countdownLabel: UILabel = UILabel(
         text: get(time: timeRemaining),
-        allignment: .center,
+        allignment: .natural,
         color: isWorkTime ? workingColor : relaxingColor,
         fontSize: 50,
         fontWeight: 0
@@ -63,17 +63,15 @@ final class PomodoroViewController: UIViewController {
     private func setupLayout() {
         timerView.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(view)
-            make.width.height.equalTo(countdownLabel.snp.width)
+            make.width.height.equalTo(UIScreen.main.bounds.size.width * 0.35)
         }
         
         countdownLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.centerX.equalTo(timerView)
+            make.top.leading.trailing.equalToSuperview()
         }
         
         timerControlButton.snp.makeConstraints { make in
-            make.centerX.equalTo(timerView)
-            make.bottom.equalToSuperview()
+            make.centerX.bottom.equalToSuperview()
             make.width.height.equalTo(countdownLabel.snp.height)
         }
     }
