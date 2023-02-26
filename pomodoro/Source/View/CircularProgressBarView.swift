@@ -11,11 +11,12 @@ final class CircularProgressBar: UIView {
             progressLayer.strokeEnd = progress
         }
     }
-    
+    private let radius: CGFloat
     
     // MARK: Initialization
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(radius: Double) {
+        self.radius = CGFloat(radius)
+        super.init(frame: .zero)
         createCircularPath()
     }
     
@@ -23,11 +24,13 @@ final class CircularProgressBar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
     // MARK: - Methods
     func createCircularPath() {
         let circularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width / 2, y: frame.size.height / 2),
-            radius: 150,
+            radius: radius,
             startAngle: startPoint,
             endAngle: endPoint,
             clockwise: true
