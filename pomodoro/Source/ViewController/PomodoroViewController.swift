@@ -32,9 +32,15 @@ final class PomodoroViewController: UIViewController {
     )
     
     private lazy var circularProgressBar: CircularProgressBar = {
-        let circularProgressBar = CircularProgressBar()
+        let circularProgressBar = CircularProgressBar(radius: UIScreen.main.bounds.size.width * 0.4)
         circularProgressBar.center = view.center
         return circularProgressBar
+    }()
+    
+    private lazy var timerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: - Lifecycle
@@ -46,23 +52,29 @@ final class PomodoroViewController: UIViewController {
     }
     
     // MARK: - Setup
-    private func setupHierarchy() {
+    private func setupHierarchy() {        
         view.addSubview(circularProgressBar)
-        view.addSubview(countdownLabel)
-        view.addSubview(timerControlButton)
+        view.addSubview(timerView)
+        
+        timerView.addSubview(countdownLabel)
+        timerView.addSubview(timerControlButton)
     }
     
     private func setupLayout() {
+        timerView.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(view)
+            make.width.height.equalTo(countdownLabel.snp.width)
+        }
+        
         countdownLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(view)
-            make.centerY.equalTo(view)
+            make.top.equalToSuperview()
+            make.centerX.equalTo(timerView)
         }
         
         timerControlButton.snp.makeConstraints { make in
-            make.centerX.equalTo(view)
-            make.top.equalTo(countdownLabel.snp.bottom).offset(20)
-            make.width.equalTo(50)
-            make.height.equalTo(50)
+            make.centerX.equalTo(timerView)
+            make.bottom.equalToSuperview()
+            make.width.height.equalTo(countdownLabel.snp.height)
         }
     }
     
